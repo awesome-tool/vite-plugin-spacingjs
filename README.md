@@ -1,15 +1,26 @@
-# pkg-name
+# Vite plugin spacingjs
 
-[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
+> 一个检测页面间距的工具，灵感来自 [spacingjs](git@github.com:stevenlei/spacingjs.git)
 
-## Sponsors
+## 安装与使用
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+```shell
+npm i vite-plugin-spacingjs --save-dev
+```
 
-## License
+```ts
+import SpacingJs from 'vite-plugin-spacingjs'
 
-[MIT](./LICENSE) License © 2022 [Anthony Fu](https://github.com/antfu)
+defineConfig({
+  plugins: [SpacingJs(options)],
+})
+```
+
+## options 默认配置
+
+| 属性      | 默认值         | 描述                                                       |
+| --------- | -------------- | ---------------------------------------------------------- |
+| lineWidth | 1px            | 线条宽度                                                   |
+| px2rem    | false          | 是否将像素转为 rem，默认 4 位小数                          |
+| remRatio  | 16px           | px 转换成 rem 的换算比例，仅在 px2rem 为 true 的情况下生效 |
+| hotKey    | `Alt`/`Option` | 唤起工具的热键                                             |
