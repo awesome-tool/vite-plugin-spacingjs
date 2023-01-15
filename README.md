@@ -1,8 +1,10 @@
 # Vite plugin spacingjs
 
-> 一个检测页面间距的工具，灵感来自 [spacingjs](git@github.com:stevenlei/spacingjs.git)
+[中文文档](./README-CN.md)
 
-## 安装与使用
+> A tool to detect page gaps, inspired by [spacingjs](git@github.com:stevenlei/spacingjs.git)
+
+## Useage
 
 ```shell
 npm i vite-plugin-spacingjs --save-dev
@@ -16,11 +18,11 @@ defineConfig({
 })
 ```
 
-## options 默认配置
+## options default setting
 
-| 属性      | 默认值         | 描述                                                       |
-| --------- | -------------- | ---------------------------------------------------------- |
-| lineWidth | 1px            | 线条宽度                                                   |
-| px2rem    | false          | 是否将像素转为 rem，默认 4 位小数                          |
-| remRatio  | 16px           | px 转换成 rem 的换算比例，仅在 px2rem 为 true 的情况下生效 |
-| hotKey    | `Alt`/`Option` | 唤起工具的热键                                             |
+| attributes | defaults       | describe                                                                   |
+| ---------- | -------------- | -------------------------------------------------------------------------- |
+| lineWidth  | 'normal'       | 'thin'/'normal'/'fat'                                                      |
+| px2rem     | false          | Whether to convert pixels to rem, 4 decimal places are reserved by default |
+| remRatio   | 16px           | The conversion ratio of px to rem takes effect only when px2rem is true    |
+| hotKey     | `Alt`/`Option` | Invoke the tool's hotkey                                                   |
